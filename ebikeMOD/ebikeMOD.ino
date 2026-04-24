@@ -14,7 +14,7 @@ void setup() {
 pinMode(hall,INPUT);
 pinMode(bike,OUTPUT);
 pinMode(LED_BUILTIN,OUTPUT);
-Serial.begin(9600);
+Serial.begin(115200);
 interval=(interval*(100-duty))/100;
  digitalWrite(LED_BUILTIN,LOW);
 }
