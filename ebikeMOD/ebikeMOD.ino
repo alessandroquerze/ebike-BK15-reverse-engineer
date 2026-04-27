@@ -51,9 +51,10 @@ bool throttle(){
   //Serial.print("acc=");
   //Serial.println(acc);
   //da 163 a 757
-  if(acc>180){ //circa 0.87v
-      
-    mapped_acc=map(acc, 180, 860, 0, 600);
+  if(acc>210){ //dead zone
+  Serial.print("acc=");
+      Serial.println(acc);
+    mapped_acc=map(acc, 180, 900, 350, 600); //350=20km/h
      period=(long)(1000-mapped_acc); 
 
   }
